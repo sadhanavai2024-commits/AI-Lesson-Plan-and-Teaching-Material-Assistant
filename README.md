@@ -1,44 +1,39 @@
-# AI-Lesson-Plan-and-Teaching-Material-Assistant
+# AI Lesson Plan & Teaching Material Assistant
 
-## 📌 Project Overview
-The AI Lesson Plan and Teaching Material Assistant helps teachers and peer tutors create lesson plans, worksheets, quizzes, homework, and teaching presentations using AI tools.
+A Streamlit app that drafts a lesson plan, worksheet, quiz, homework, six-slide deck outline, visual ideas, and a teacher verification checklist.
 
-## 🎯 Objectives
-- Generate a 45-minute lesson plan.
-- Create worksheets, quizzes, and homework.
-- Generate classroom visuals and teaching slides.
-- Verify content accuracy and syllabus alignment.
-- Automate worksheets using Google Forms.
-- Collect feedback and improve learning materials.
+## Run locally
 
-## 🛠️ Tools Used
-- ChatGPT
-- Google Gemini
-- Canva
-- Gamma
-- Google Forms
+1. Install Python 3.10 or newer.
+2. Open a terminal in this folder.
+3. Install dependencies:
 
-## 🚀 Key Features
-- AI-powered lesson planning
-- Automatic question and worksheet generation
-- Visual learning materials
-- Presentation creation
-- Content verification and feedback analysis
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 📂 Project Deliverables
-- Lesson plan
-- Worksheet and quiz
-- Classroom visuals
-- Six-slide presentation
-- Feedback summary
-- Revision notes
-- Prompt library
-- Verification report
-- Before-and-after analysis
-- Final demonstration
+4. Start the app:
 
-## 💡 Expected Outcome
-To save teachers' time, improve teaching materials, and support effective learning with AI while ensuring human review for accuracy and age appropriateness.
+   ```bash
+   streamlit run app.py
+   ```
 
-## 👩‍🏫 Responsible AI
-All AI-generated content must be reviewed by a teacher to correct factual errors, ensure syllabus alignment, and maintain student safety and privacy.
+5. Open the local URL shown in the terminal (usually `http://localhost:8501`).
+
+## Enable customized AI generation
+
+Create a Gemini API key from Google AI Studio. Run the app and paste the key into the sidebar, or set `GEMINI_API_KEY` as an environment variable. Do not commit API keys to GitHub.
+
+Without an API key, the app still runs and produces a starter template.
+
+## Deploy and get a public web link
+
+1. Upload `app.py`, `requirements.txt`, and `README.md` to a GitHub repository.
+2. Sign in to Streamlit Community Cloud: https://share.streamlit.io/
+3. Choose **Create app**, select your repository and `app.py`, then deploy.
+4. Add `GEMINI_API_KEY` in the app's **Settings / Secrets** if you want AI generation.
+5. Streamlit will provide a public app URL after deployment.
+
+## Responsible AI
+
+AI-generated content can contain errors. A teacher should verify facts, answer keys, curriculum alignment, age suitability, accessibility, and student privacy before classroom use.
